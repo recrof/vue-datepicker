@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/vue@2.2.6/dist/vue.js"></script>
+    <script src="js/vue-datepicker.js"></script>
+    <link rel="stylesheet" href="css/vue-datepicker.css">
+</head>
+<div id="app">
+    <input v-model="birthDate" @focus="pickVisible = true" type="text" placeholder="02/02/2002"/>
+    <date-picker v-if="pickVisible" v-model="birthDate" :config="pickerConfig" @blur="pickVisible = false" @change="pickChanged"></date-picker>
+</div>
+<script>
+  var app = new Vue({
+      el: '#app',
+      data: {
+          pickVisible: false,
+          birthDate: '',
+          pickerConfig: {
+              names: {
+                  months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                  days: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+              },
+              mondayFirst: true, // monday as first weekday
+              format: 'mm/dd/yyyy' // date exchange format.
+          }
+      },
+      methods: {
+        pickChanged: function(pickDate) {
+          this.birthDate = pickDate;
+        }
+      }
+  });
+</script>
+</html>

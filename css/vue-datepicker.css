@@ -1,0 +1,74 @@
+.picker-clickcatcher {
+	position: fixed;
+	z-index: 98;
+	background-color: rgba(55, 55, 55, 0.1);
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.picker-container {
+	position: absolute;
+	padding: 15px 25px;
+	z-index: 99;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	box-sizing: border-box;
+	font-family: "Arial";
+	box-shadow: 5px 5px 5px #ccc;
+}
+.picker-header, .picker-days {
+	text-align: center;
+}
+.picker-year, .picker-month {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 5px;
+	font-size: 1em;
+}
+.picker-data, .picker-captions {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.picker-data, .picker-captions li {
+	vertical-align: top;
+	display: inline-block;
+	width: 30px;
+}
+.picker-captions li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+.picker-data li {
+	padding: 5px;
+}
+.picker-data li.dummy {
+	border: 1px solid transparent;
+}
+.picker-data li:not(.dummy) {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color .3s;
+}
+.picker-data.weekend li:not(.dummy) {
+	background-color: #eee;
+}
+.picker-data li:not(.dummy).selected {
+	font-weight: bold;
+	border: 1px solid black;
+	background-color: red;
+	color: white;
+}
+.picker-data li:not(.dummy):hover {
+	font-weight: bold;
+	border: 1px solid red;
+}
