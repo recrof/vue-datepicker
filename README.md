@@ -35,7 +35,7 @@ Here is a sample configuration:
     days: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
   },
   mondayFirst: true, // monday as first weekday
-  startDate: '02/02/2002', // initial date
   format: 'mm/dd/yyyy' // date exchange format.
 }
 ```
+for more details, look at [demo html](demo.html)
