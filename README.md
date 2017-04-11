@@ -12,7 +12,6 @@ Vue.js datepicker component
 <script>
   var app = new Vue({
       el: '#app',
-      router: router,
       data: {
           pickVisible: false,
           birth_date: ''
